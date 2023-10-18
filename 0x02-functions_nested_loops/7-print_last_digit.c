@@ -2,7 +2,7 @@
 
 
 /**
- * _abs - Computers the absolute
+ * absolute - Computers the absolute
  * @c: The number computed
  * Return: Absolute value
  */
