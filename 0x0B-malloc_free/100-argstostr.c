@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * argstostr - concatenates arguments of a function
+ * argstostr  - concatenates arguments of a function
  * @ac: arguments count
  * @av: arguments vector
  * Return: pointer to concatenated string
@@ -20,7 +20,7 @@ char *argstostr(int ac, char **av)
 		count++;
 	}
 	output = malloc(sizeof(char) * count + 1);
-	if (output == '\0' NULL)
+	if (output == NULL)
 		return (NULL);
 
 	for (i = 0; i < ac; i++)
