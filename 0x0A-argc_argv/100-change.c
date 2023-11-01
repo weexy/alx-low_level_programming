@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * main - main function
- * @argc: argument count
- * @argv: argument vector
- * Return: 0
- */
+* main - main function
+* @argc: argument count
+* @argv: argument vector
+* Return: 0
+*/
 
 int main(int argc, char *argv[])
 {
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 			cents = cents - 2;
 		else if (cents >= 1)
 			cents = cents - 1;
-		coins++;
+		coins ++;
 	}
 	printf("%d\n", coins);
 	return (0);
