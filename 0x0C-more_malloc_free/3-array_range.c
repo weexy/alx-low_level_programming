@@ -1,38 +1,27 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
-* alloc_grid - 2 dimensional array
-* @width: number of columns
-* @height: number of rows
-* Return: pointer to array_range
-*/
-
-int **alloc_grid(int width, int height)
+ * array_range - create an array of intergers
+ * @min: minimum value
+ * @max: value
+ * Return: int pointer to the allocated memory
+ */
+int *array_range(int min, int max)
 {
-	int i, j;
-	int **output;
+	int i, l;
+	int *a;
 
-	if (width <= 0 || height <= 0)
+	if (min > max)
 		return (NULL);
-
-	output = malloc(sizeof(int *) * height);
-
-	if (output == NULL)
+	l = max - min + 1;
+	a = malloc(sizeof(int) * l);
+	if (a == NULL)
 		return (NULL);
-
-	for (i = 0; i < height; i++)
+	for (i = 0; i < l; i++)
 	{
-		output[i] = malloc(sizeof(int) * width);
-
-		if (output[i] == NULL)
-		{
-			free(output);
-			for (j = 0; j <= height; j++)
-				free(output[j]);
-			return (NULL);
-		}
-		for (j = 0; j < width; j++)
-			output[i][j] = 0;
+		a[i] = min;
+		min++;
 	}
-	return (output);
+	return (a);
 }
+
